@@ -1,0 +1,32 @@
+{
+  "extensionName": { "message": "ChatGPT_Latex" },
+  "extensionDescription": { "message": "复制规范化 LaTeX，或将 AI 聊天公式直接粘贴为 Microsoft Word 公式。" },
+  "popupSubtitle": { "message": "公式复制设置" },
+  "copyBehavior": { "message": "复制行为" },
+  "closeAfterCopy": { "message": "复制后关闭" },
+  "closeAfterCopyDescription": { "message": "剪贴板写入成功后关闭编辑器" },
+  "pageFormula": { "message": "页面公式" },
+  "doubleClickEditor": { "message": "双击打开编辑器" },
+  "settingsSaved": { "message": "设置已保存" },
+  "copiedWord": { "message": "已复制到 Word" },
+  "copiedLatex": { "message": "已复制 LaTeX" },
+  "quickActions": { "message": "公式快捷操作" },
+  "copyLatex": { "message": "复制 LaTeX" },
+  "copyWord": { "message": "复制到 Word" },
+  "copyWordFailed": { "message": "Word 公式转换或复制失败" },
+  "copyLatexFailed": { "message": "LaTeX 复制失败" },
+  "formulaPreview": { "message": "公式预览" },
+  "closeEditor": { "message": "关闭公式编辑器" },
+  "editorSubtitle": { "message": "已规范化 LaTeX，并支持直接复制到 Word" },
+  "close": { "message": "关闭" },
+  "latexSource": { "message": "LaTeX 源码" },
+  "characterCount": {
+    "message": "$COUNT$ 字符",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "wordCompatibleConverted": { "message": "Word 兼容检查通过；复制时会转换不受支持的环境语法" },
+  "wordCompatible": { "message": "Word LaTeX 兼容检查通过" },
+  "wordCompatibilityWarning": { "message": "Word 兼容警告" },
+  "noFormula": { "message": "没有可复制的公式" },
+  "clipboardFailed": { "message": "剪贴板写入失败" }
+}

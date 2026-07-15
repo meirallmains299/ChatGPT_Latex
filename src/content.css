@@ -1,0 +1,388 @@
+#chatgpt-latex-root,
+#chatgpt-latex-root * {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+#chatgpt-latex-root {
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  font-size: 14px;
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+}
+
+#chatgpt-latex-root .wlc-backdrop {
+  appearance: none;
+  background: rgba(10, 10, 10, 0.76);
+  border: 0;
+  border-radius: 0;
+  cursor: default;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#chatgpt-latex-root .wlc-dialog {
+  background: #0a0a0a;
+  border: 1px solid #2a2d30;
+  border-radius: 20px;
+  box-shadow: 0 28px 90px rgba(10, 10, 10, 0.46);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  margin: 0;
+  max-height: min(760px, calc(100dvh - 40px));
+  max-width: calc(100vw - 32px);
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(720px, calc(100vw - 32px));
+}
+
+#chatgpt-latex-root .wlc-header {
+  align-items: flex-start;
+  background: #0a0a0a;
+  border-bottom: 1px solid #25282b;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 24px 28px 20px;
+}
+
+#chatgpt-latex-root .wlc-header h2 {
+  color: #ffffff;
+  font: 500 26px/1.25 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  margin: 0;
+}
+
+#chatgpt-latex-root .wlc-header p {
+  color: #8d969e;
+  font: 400 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  margin: 4px 0 0;
+}
+
+#chatgpt-latex-root .wlc-close {
+  background: #16181a;
+  border: 1px solid #2a2d30;
+  border-radius: 999px;
+  color: #c9c9cd;
+  cursor: pointer;
+  font: 600 14px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  min-height: 36px;
+  padding: 0 16px;
+  transition: background 160ms ease, color 160ms ease, transform 100ms ease;
+}
+
+#chatgpt-latex-root .wlc-close:hover {
+  background: #25282b;
+  color: #ffffff;
+}
+
+#chatgpt-latex-root .wlc-close:active {
+  transform: translateY(1px);
+}
+
+#chatgpt-latex-root .wlc-body {
+  background: #0a0a0a;
+  display: grid;
+  gap: 20px;
+  overflow: auto;
+  padding: 24px 28px 28px;
+}
+
+#chatgpt-latex-root .wlc-preview {
+  align-items: center;
+  background: #16181a;
+  border: 1px solid #2a2d30;
+  border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  min-height: 132px;
+  overflow: auto;
+  padding: 24px;
+}
+
+#chatgpt-latex-root .wlc-preview math,
+#chatgpt-latex-root .wlc-preview .katex-html {
+  color: #ffffff;
+  font-size: 1.25em;
+}
+
+#chatgpt-latex-root .wlc-preview-empty {
+  color: #8d969e;
+  font: 500 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+#chatgpt-latex-root .wlc-field {
+  display: grid;
+  gap: 8px;
+}
+
+#chatgpt-latex-root .wlc-field label {
+  color: #c9c9cd;
+  font: 600 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+}
+
+#chatgpt-latex-root .wlc-field textarea {
+  appearance: none;
+  background: #16181a;
+  border: 1px solid #34383c;
+  border-radius: 12px;
+  color: #ffffff;
+  font: 400 14px/1.65 "Cascadia Mono", Consolas, monospace;
+  min-height: 136px;
+  outline: none;
+  padding: 16px;
+  resize: vertical;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+  width: 100%;
+}
+
+#chatgpt-latex-root .wlc-field textarea::selection {
+  background: rgba(73, 79, 223, 0.55);
+}
+
+#chatgpt-latex-root .wlc-field textarea:focus {
+  border-color: #4f55f1;
+  box-shadow: inset 0 0 0 1px #4f55f1;
+}
+
+#chatgpt-latex-root .wlc-field-meta {
+  align-items: center;
+  color: #8d969e;
+  display: flex;
+  font: 400 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  justify-content: space-between;
+  min-height: 24px;
+}
+
+#chatgpt-latex-root .wlc-status {
+  color: #00a87e;
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+#chatgpt-latex-root .wlc-status.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#chatgpt-latex-root .wlc-status.is-error {
+  color: #e23b4a;
+}
+
+#chatgpt-latex-root .wlc-compatibility {
+  color: #58bd91;
+  font: 500 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  margin: -2px 0 0;
+}
+
+#chatgpt-latex-root .wlc-compatibility.has-warning {
+  color: #ec9a3c;
+}
+
+#chatgpt-latex-root .wlc-footer {
+  align-items: center;
+  background: #0a0a0a;
+  border-top: 1px solid #25282b;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 18px 28px 22px;
+}
+
+#chatgpt-latex-root .wlc-button {
+  border-radius: 999px;
+  cursor: pointer;
+  font: 600 14px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  min-height: 44px;
+  padding: 0 20px;
+  transition: background 160ms ease, border-color 160ms ease, transform 100ms ease;
+}
+
+#chatgpt-latex-root .wlc-button:active {
+  transform: translateY(1px);
+}
+
+#chatgpt-latex-root .wlc-close:focus-visible,
+#chatgpt-latex-root .wlc-button:focus-visible,
+#chatgpt-latex-quick-actions .wlc-quick-button:focus-visible {
+  outline: 2px solid #8b91ff;
+  outline-offset: 2px;
+}
+
+#chatgpt-latex-root .wlc-button-secondary {
+  background: #16181a;
+  border: 1px solid #34383c;
+  color: #ffffff;
+}
+
+#chatgpt-latex-root .wlc-button-secondary:hover {
+  background: #25282b;
+  border-color: #505a63;
+}
+
+[data-wlc-recognized] {
+  border-radius: 12px;
+  outline: 2px solid transparent;
+  outline-offset: 6px;
+  transition: background 140ms ease, outline-color 140ms ease;
+}
+
+[data-wlc-recognized="inline"] {
+  border-radius: 3px;
+  outline-width: 1px;
+  outline-offset: 2px;
+}
+
+#chatgpt-latex-quick-actions {
+  align-items: center;
+  background: #16181a;
+  border: 1px solid #34383c;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(10, 10, 10, 0.24);
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  gap: 4px;
+  left: -10000px;
+  letter-spacing: 0;
+  opacity: 0;
+  padding: 4px;
+  pointer-events: none !important;
+  position: fixed;
+  top: -10000px;
+  transform: translateY(4px);
+  transition: opacity 140ms ease, transform 140ms ease;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 2147483644;
+}
+
+#chatgpt-latex-quick-actions.is-visible {
+  opacity: 1;
+  pointer-events: auto !important;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+#chatgpt-latex-quick-actions .wlc-quick-button {
+  appearance: none;
+  background: #2a2d30;
+  border: 1px solid #3a3d40;
+  border-radius: 999px;
+  color: #ffffff;
+  cursor: pointer;
+  font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei UI", sans-serif;
+  margin: 0;
+  min-height: 32px;
+  padding: 0 12px;
+  transition: background 120ms ease, transform 100ms ease;
+}
+
+#chatgpt-latex-quick-actions .wlc-quick-button:hover {
+  background: #3a3d40;
+  border-color: #505a63;
+}
+
+#chatgpt-latex-quick-actions .wlc-quick-button:active {
+  transform: translateY(1px);
+}
+
+[data-wlc-recognized="display"]:hover,
+[data-wlc-recognized="inline"]:hover,
+[data-wlc-recognized="display"][data-wlc-active],
+[data-wlc-recognized="inline"][data-wlc-active] {
+  background: rgba(73, 79, 223, 0.045);
+  outline-color: rgba(73, 79, 223, 0.78);
+}
+
+html.dark [data-wlc-recognized="display"]:hover,
+html.dark [data-wlc-recognized="inline"]:hover,
+html.dark [data-wlc-recognized][data-wlc-active],
+html[data-theme="dark"] [data-wlc-recognized="display"]:hover,
+html[data-theme="dark"] [data-wlc-recognized="inline"]:hover,
+html[data-theme="dark"] [data-wlc-recognized][data-wlc-active] {
+  background: rgba(111, 117, 255, 0.11);
+  outline-color: rgba(139, 145, 255, 0.92);
+}
+
+.wlc-page-toast {
+  background: #16181a;
+  border: 1px solid #34383c;
+  border-radius: 999px;
+  bottom: 24px;
+  box-shadow: 0 12px 32px rgba(10, 10, 10, 0.3);
+  color: #ffffff;
+  font: 600 14px/1 Arial, "Microsoft YaHei UI", sans-serif;
+  opacity: 0;
+  padding: 12px 18px;
+  pointer-events: none;
+  position: fixed;
+  right: 24px;
+  transform: translateY(8px);
+  transition: opacity 140ms ease, transform 140ms ease;
+  z-index: 2147483645;
+}
+
+.wlc-page-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wlc-page-toast.is-error {
+  background: #8b0000;
+  border-color: #e23b4a;
+}
+
+@media (max-width: 560px) {
+  #chatgpt-latex-root .wlc-dialog {
+    border-radius: 16px;
+    max-height: calc(100dvh - 20px);
+    max-width: calc(100vw - 20px);
+    width: calc(100vw - 20px);
+  }
+
+  #chatgpt-latex-root .wlc-header,
+  #chatgpt-latex-root .wlc-body,
+  #chatgpt-latex-root .wlc-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  #chatgpt-latex-root .wlc-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #chatgpt-latex-root .wlc-close,
+  #chatgpt-latex-root .wlc-field textarea,
+  #chatgpt-latex-root .wlc-status,
+  #chatgpt-latex-root .wlc-button,
+  [data-wlc-recognized],
+  #chatgpt-latex-quick-actions,
+  #chatgpt-latex-quick-actions .wlc-quick-button,
+  .wlc-page-toast {
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-wlc-recognized="display"]:hover,
+  [data-wlc-recognized="inline"]:hover,
+  [data-wlc-recognized][data-wlc-active] {
+    background: rgba(111, 117, 255, 0.11);
+    outline-color: rgba(139, 145, 255, 0.92);
+  }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formula Recognition Fixture</title>
+    <link rel="stylesheet" href="../src/content.css">
+    <style>
+      body {
+        background: #ffffff;
+        color: #191c1f;
+        font: 18px/1.6 Arial, sans-serif;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 80px 24px;
+      }
+      .katex-display {
+        margin: 32px 0;
+        padding: 24px;
+        text-align: center;
+      }
+      .katex-mathml {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+    </style>
+  </head>
+  <body>
+    <p>Move over the equation, then double-click it.</p>
+    <span class="katex-display">
+      <span class="katex">
+        <span class="katex-mathml">
+          <math display="block">
+            <semantics>
+              <mrow><mi>C</mi><mo>=</mo><mn>1</mn></mrow>
+              <annotation encoding="application/x-tex">C_{i,f,s}(t;R)
+=
+\mathbf 1\!\left[d_{i,f,s}(t)\leq R\right]
+=1,</annotation>
+            </semantics>
+          </math>
+        </span>
+        <span class="katex-html" aria-hidden="true">C(i,f,s;t,R) = 1[d(i,f,s;t) ≤ R]</span>
+      </span>
+    </span>
+    <script>
+      globalThis.chrome = {
+        runtime: { lastError: null },
+        storage: {
+          local: {
+            get(defaults, callback) { callback(defaults); }
+          }
+        }
+      };
+    </script>
+    <script src="../src/vendor/katex.min.js"></script>
+    <script src="../src/latex-normalizer.js"></script>
+    <script src="../src/word-mathml.js"></script>
+    <script src="../src/content.js"></script>
+  </body>
+</html>

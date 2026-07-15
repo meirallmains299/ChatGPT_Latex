@@ -1,0 +1,32 @@
+{
+  "extensionName": { "message": "ChatGPT_Latex" },
+  "extensionDescription": { "message": "Copy normalized LaTeX or paste AI-chat formulas directly into Microsoft Word." },
+  "popupSubtitle": { "message": "Formula copy settings" },
+  "copyBehavior": { "message": "Copy behavior" },
+  "closeAfterCopy": { "message": "Close after copy" },
+  "closeAfterCopyDescription": { "message": "Close the editor after a successful clipboard write" },
+  "pageFormula": { "message": "Page formula" },
+  "doubleClickEditor": { "message": "Double-click to edit" },
+  "settingsSaved": { "message": "Settings saved" },
+  "copiedWord": { "message": "Copied to Word" },
+  "copiedLatex": { "message": "LaTeX copied" },
+  "quickActions": { "message": "Formula quick actions" },
+  "copyLatex": { "message": "Copy LaTeX" },
+  "copyWord": { "message": "Copy to Word" },
+  "copyWordFailed": { "message": "Word conversion or copy failed" },
+  "copyLatexFailed": { "message": "LaTeX copy failed" },
+  "formulaPreview": { "message": "Formula preview" },
+  "closeEditor": { "message": "Close formula editor" },
+  "editorSubtitle": { "message": "Normalized LaTeX with Word-ready copy" },
+  "close": { "message": "Close" },
+  "latexSource": { "message": "LaTeX source" },
+  "characterCount": {
+    "message": "$COUNT$ characters",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "wordCompatibleConverted": { "message": "Word compatibility passed; unsupported environments will be converted" },
+  "wordCompatible": { "message": "Word compatibility check passed" },
+  "wordCompatibilityWarning": { "message": "Word compatibility warning" },
+  "noFormula": { "message": "No formula to copy" },
+  "clipboardFailed": { "message": "Clipboard write failed" }
+}

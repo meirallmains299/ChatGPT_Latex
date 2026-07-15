@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT_Latex</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark" aria-hidden="true">fx</div>
+        <div>
+          <h1 data-i18n="extensionName">ChatGPT_Latex</h1>
+          <p data-i18n="popupSubtitle">Formula copy settings</p>
+        </div>
+      </header>
+
+      <section aria-labelledby="behavior-title">
+        <h2 id="behavior-title" data-i18n="copyBehavior">Copy behavior</h2>
+
+        <label class="setting" for="close-after-copy">
+          <span>
+            <strong data-i18n="closeAfterCopy">Close after copy</strong>
+            <small data-i18n="closeAfterCopyDescription">Close the editor after a successful clipboard write</small>
+          </span>
+          <input id="close-after-copy" type="checkbox">
+        </label>
+      </section>
+
+      <div class="usage">
+        <span data-i18n="pageFormula">Page formula</span>
+        <strong data-i18n="doubleClickEditor">Double-click to edit</strong>
+      </div>
+
+      <p class="status" id="status" role="status" data-i18n="settingsSaved">Settings saved</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

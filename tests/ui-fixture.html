@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT_Latex UI Fixture</title>
+    <link rel="stylesheet" href="../src/content.css">
+    <style>
+      body {
+        background: #f7f7f8;
+        color: #191c1f;
+        font: 16px/1.6 Arial, sans-serif;
+        margin: 0 auto;
+        max-width: 920px;
+        padding: 64px 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>A contact was assigned when the following indicator function equals one.</p>
+    <div class="katex-display" data-wlc-recognized="display">
+      C(i,f,s;t,R) = 1[d(i,f,s;t) &lt;= R]
+    </div>
+
+    <div id="chatgpt-latex-root">
+      <button class="wlc-backdrop" type="button" aria-label="关闭公式编辑器"></button>
+      <section class="wlc-dialog" role="dialog" aria-modal="true" aria-labelledby="wlc-title">
+        <header class="wlc-header">
+          <div>
+            <h2 id="wlc-title">ChatGPT_Latex</h2>
+            <p>已整理页面源码中的换行与缩进</p>
+          </div>
+          <button class="wlc-close" type="button">关闭</button>
+        </header>
+        <div class="wlc-body">
+          <div class="wlc-preview" aria-label="公式预览">
+            <math display="block">
+              <mrow><msub><mi>C</mi><mrow><mi>i</mi><mo>,</mo><mi>f</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow>
+            </math>
+          </div>
+          <div class="wlc-field">
+            <label for="wlc-source">LaTeX 源码</label>
+            <textarea id="wlc-source" rows="5">C_{i,f,s}(t;R) = \mathbf 1\!\left[d_{i,f,s}(t)\leq R\right] =1,</textarea>
+            <div class="wlc-field-meta">
+              <span class="wlc-status is-visible">已复制 Word LaTeX</span>
+              <span>73 字符</span>
+            </div>
+            <p class="wlc-compatibility">Word LaTeX 兼容检查通过</p>
+          </div>
+        </div>
+        <footer class="wlc-footer">
+          <button class="wlc-button wlc-button-secondary" type="button">复制源码</button>
+          <button class="wlc-button wlc-button-secondary" type="button">复制到 Word</button>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>

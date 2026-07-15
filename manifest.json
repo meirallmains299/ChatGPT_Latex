@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "version": "1.0.0",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "permissions": ["clipboardWrite", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extensionName__",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://chat.deepseek.com/*",
+        "https://gemini.google.com/*",
+        "https://copilot.microsoft.com/*"
+      ],
+      "js": [
+        "src/latex-normalizer.js",
+        "src/word-mathml.js",
+        "src/content.js"
+      ],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

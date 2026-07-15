@@ -1,0 +1,26 @@
+{
+  "name": "chatgpt-latex",
+  "version": "1.0.0",
+  "description": "Detect LaTeX on AI chat pages and copy Word-ready equations.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinken-y/ChatGPT_Latex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vinken-y/ChatGPT_Latex/issues"
+  },
+  "homepage": "https://github.com/Vinken-y/ChatGPT_Latex#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/background.js && node --check src/latex-normalizer.js && node --check src/word-mathml.js && node --check src/content.js && node --check popup.js && node --check scripts/validate-extension.js",
+    "validate": "node scripts/validate-extension.js"
+  },
+  "dependencies": {
+    "katex": "0.16.47"
+  }
+}

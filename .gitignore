@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+dist/
+release/
+*.zip
+*.sha256
+*.sha256.txt
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
